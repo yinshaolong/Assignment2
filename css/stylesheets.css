@@ -14,3 +14,6 @@ main{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 1fr 1fr 3fr 2fr;
 }
+.title{
+    font-family: Montserrat;
+}
