@@ -29,6 +29,11 @@ h1{
     gap: 10px;
     padding-right: 15px;
 }
+.links a{
+    text-decoration: none;
+    color:#256993;
+    font-weight:bold;
+}
 .topButtons{
     grid-column: 1/-1;
     justify-content: space-between;
@@ -54,6 +59,7 @@ h1{
 .title{
     font-family: Montserrat;
     color:#256993;
+    font-weight: bold;
 }
 footer{
     display: grid;
