@@ -85,4 +85,7 @@ button{
     color:white;
     border-radius: 10px;
     border-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-height: 90%;
 }
