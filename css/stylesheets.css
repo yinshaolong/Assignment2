@@ -48,3 +48,17 @@ h1{
 .title{
     font-family: Montserrat;
 }
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+h3{
+    display:flex;
+    grid-column: 1/-1;
+    justify-content: center;
+}
+footer a:first-of-type{
+        display: flex;
+        justify-content: end;
+}
