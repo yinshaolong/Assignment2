@@ -14,6 +14,19 @@ main{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 1fr 1fr 3fr 2fr;
 }
+h1{
+    grid-column: 1/-1;
+    justify-content: center;
+    display: flex;
+}
+.links{
+    font-family: Montserrat;
+    grid-column: 1/-1;
+    justify-content: end;
+    display: flex;
+    gap: 10px;
+    padding-right: 15px;
+}
 .title{
     font-family: Montserrat;
 }
