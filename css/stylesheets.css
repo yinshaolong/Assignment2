@@ -95,3 +95,12 @@ button{
     padding-right: 10px;
     max-height: 90%;
 }
+h2{
+    display:flex;
+    justify-content: center;
+}
+li{
+    font-family: Montserrat;
+    color:#256993;
+    font-weight: bold;
+}
