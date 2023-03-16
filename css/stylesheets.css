@@ -27,6 +27,13 @@ h1{
     gap: 10px;
     padding-right: 15px;
 }
+.topButtons{
+    grid-column: 1/-1;
+    justify-content: space-between;
+    display: flex;
+    padding-right: 10px;
+    padding-left: 10px;
+}
 .title{
     font-family: Montserrat;
 }
