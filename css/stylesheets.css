@@ -1,5 +1,7 @@
 body{
     display:flex;
+    height: 100vh;
+    margin: 0;
 }
 aside{
     flex-grow: 1;
@@ -10,6 +12,7 @@ aside{
     display: flex;
     flex-direction: column;
     background-color: #F3E9DE;
+    justify-content: space-between;
 }
 main{
     display: grid;
@@ -43,7 +46,7 @@ h1{
 }
 #note{
     grid-column: 1/-1;
-    margin: 15px 5px;
+    margin: 15px 10px;
     border-radius: 3px;
     border-color: cornflowerblue;
     border-width: 2px;
