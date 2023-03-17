@@ -1,6 +1,9 @@
+html{
+    height:100%;
+}
 body{
     display:flex;
-    /* height: 100vh; */
+    height: 100%;
     margin: 0;
     flex-direction: column;
 }
@@ -14,11 +17,13 @@ aside{
     flex-direction: column;
     background-color: #F3E9DE;
     justify-content: space-between;
+    min-height: 0;
 }
 main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 1fr 1fr 5fr 1fr;
+    min-height:0;
 }
 h1{
     grid-column: 1/-1;
@@ -112,6 +117,9 @@ li{
 {
     body{
         flex-direction:row;
-        height: 100%;
     }
+}
+img{
+    height: 3em;
+    width:3em;
 }
