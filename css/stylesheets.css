@@ -2,6 +2,7 @@ body{
     display:flex;
     height: 100vh;
     margin: 0;
+    flex-direction: column;
 }
 aside{
     flex-grow: 1;
@@ -106,4 +107,10 @@ li{
     font-family: Montserrat;
     color:#256993;
     font-weight: bold;
+}
+@media screen and (min-width: 600px)
+{
+    body{
+        flex-direction:row;
+    }
 }
