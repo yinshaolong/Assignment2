@@ -29,8 +29,9 @@ h1{
     grid-column: 1/-1;
     justify-content: center;
     display: flex;
+    font-size: 1.5em;
 }
-.links{
+nav{
     font-family: Montserrat;
     grid-column: 1/-1;
     justify-content: end;
@@ -38,7 +39,7 @@ h1{
     gap: 0.5em;
     padding-right: 1em;
 }
-.links a{
+nav a{
     text-decoration: none;
     color:#256993;
     font-weight:bold;
@@ -117,6 +118,12 @@ li{
 {
     body{
         flex-direction:row;
+    }
+}
+@media screen and (min-width: 280px)
+{
+    h1{
+        font-size: 2m;
     }
 }
 img{
