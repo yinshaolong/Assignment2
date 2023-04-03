@@ -46,10 +46,8 @@ function handleNew(){
 function addToSideBar(newNote){
     let isDarkMode = darkThemeButton.textContent === "Light Theme";
     let newNoteLi = document.createElement("li")
-    console.log(newNote)
     newNoteLi.innerText = newNote.title !== "" ? newNote.title : "Untitled"
     document.querySelector("ul").appendChild(newNoteLi)
-    console.log(newNoteLi)
     if (isDarkMode){
         newNoteLi.classList.toggle("whiteFont")
     }
