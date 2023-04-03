@@ -1,7 +1,8 @@
 const darkThemeButton = document.querySelector("#darkTheme")
 const newNoteButton = document.querySelector("#newNote")
 const saveButton = document.querySelector("#save")
-const cancel_button = document.querySelector("#cancel")
+const cancelButton = document.querySelector("#cancel")
+const textAreaButtons = document.querySelector(".textAreaButtons")
 let container = document.querySelector(".container")
 let aside = document.querySelector("aside")
 let note = document.querySelector("#note")
@@ -32,6 +33,10 @@ function changeButtonText(){
         darkThemeButton.textContent = "Dark Theme"
     }
 }
+function handleCancel(){
+    textAreaButtons.classList.add("hidden")
+    note.classList.add("hidden")
+}
 function alertUser(){
     noteTitle =prompt("Please enter a title for the note.")
 }
@@ -42,3 +47,4 @@ saveButton.addEventListener("click", alertUser)
 saveButton.addEventListener("click", appendNotes)
 darkThemeButton.addEventListener("click", toggleDarkTheme)
 darkThemeButton.addEventListener("click", changeButtonText)
+cancelButton.addEventListener("click", handleCancel)

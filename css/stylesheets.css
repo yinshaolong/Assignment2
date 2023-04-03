@@ -135,6 +135,12 @@ li{
     /* background-color: grey; */
     color:white;
 }
+.hidden{
+    display: none;
+}
+#note.hidden{
+    display:none;
+}
 @media screen and (min-width: 600px)
 {
     body{
