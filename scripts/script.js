@@ -83,6 +83,3 @@ darkThemeButton.addEventListener("click", changeButtonText)
 cancelButton.addEventListener("click", handleCancel)
 newNoteButton.addEventListener("click", handleNew)
 document.querySelector("ul").addEventListener("click", handleClickNoteTitle)
-// ulLis.forEach(li => {
-//     li.addEventListener("click", handleClickNoteTitle)
-// })
