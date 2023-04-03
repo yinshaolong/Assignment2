@@ -55,7 +55,11 @@ function addToSideBar(newNote){
     }
 }
 function appendNotes(){
-    let noteTitle = prompt("Please enter a title for the note.")
+    let noteTitle
+    do{
+        noteTitle = prompt("Please enter a title for the note.")
+    }while(noteTitle === "")
+
     let body = note.value;
     if (noteTitle !== "" || body !== ""){
         let newNote = {title: noteTitle, body: body}
