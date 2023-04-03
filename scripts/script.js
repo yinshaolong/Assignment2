@@ -1,4 +1,5 @@
 const notesArray = [{title:"note one", body:"this is my first note"}, {title:"note two", body:"this is my second note"}]
+
 const darkThemeButton = document.querySelector("#darkTheme")
 const newNoteButton = document.querySelector("#newNote")
 const saveButton = document.querySelector("#save")
@@ -50,9 +51,9 @@ function addToSideBar(newNote){
     document.querySelector("ul").appendChild(newNoteLi)
     console.log(newNoteLi)
     if (isDarkMode){
-        console.log(newNoteLi)
         newNoteLi.classList.toggle("whiteFont")
     }
+    // newNoteLi.addEventListener("click", handleClickNoteTitle)
 }
 function appendNotes(){
     let noteTitle
@@ -69,8 +70,19 @@ function appendNotes(){
     }
 
 }
+function handleClickNoteTitle(event){
+    let title = event.target.innerText
+    let filteredArray = notesArray.filter(note => note.title === title)
+    let noteBody = filteredArray[0].body
+    note.value = noteBody
+}
+
 saveButton.addEventListener("click", appendNotes)
 darkThemeButton.addEventListener("click", toggleDarkTheme)
 darkThemeButton.addEventListener("click", changeButtonText)
 cancelButton.addEventListener("click", handleCancel)
 newNoteButton.addEventListener("click", handleNew)
+document.querySelector("ul").addEventListener("click", handleClickNoteTitle)
+// ulLis.forEach(li => {
+//     li.addEventListener("click", handleClickNoteTitle)
+// })
