@@ -114,6 +114,27 @@ li{
     color:#256993;
     font-weight: bold;
 }
+.blackBG{
+    background-color:black;
+}
+.whiteFont{
+    color: white;
+}
+.greyBG{
+    background-color: #1B1C27;
+}
+#note.greyBG{
+    background-color: #1B1C27;
+    color: white;
+}
+#darkTheme.goldBG{
+    background-color: #CCA43B;
+    color:black;
+}
+#note.greyBG::placeholder{
+    /* background-color: grey; */
+    color:white;
+}
 @media screen and (min-width: 600px)
 {
     body{
