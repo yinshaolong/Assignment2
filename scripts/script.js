@@ -37,6 +37,10 @@ function handleCancel(){
     textAreaButtons.classList.add("hidden")
     note.classList.add("hidden")
 }
+function handleNew(){
+    textAreaButtons.classList.remove("hidden")
+    note.classList.remove("hidden")
+}
 function alertUser(){
     noteTitle =prompt("Please enter a title for the note.")
 }
@@ -48,3 +52,4 @@ saveButton.addEventListener("click", appendNotes)
 darkThemeButton.addEventListener("click", toggleDarkTheme)
 darkThemeButton.addEventListener("click", changeButtonText)
 cancelButton.addEventListener("click", handleCancel)
+newNoteButton.addEventListener("click", handleNew)
