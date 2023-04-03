@@ -1,3 +1,4 @@
+const notesArray = [{title:"note one", body:"this is my first note"}, {title:"note two", body:"this is my second note"}]
 const darkThemeButton = document.querySelector("#darkTheme")
 const newNoteButton = document.querySelector("#newNote")
 const saveButton = document.querySelector("#save")
@@ -8,9 +9,9 @@ let aside = document.querySelector("aside")
 let note = document.querySelector("#note")
 let titles = document.querySelectorAll(".title")
 let navAs = document.querySelectorAll("nav a")
-let ulLis = document.querySelectorAll("ul li")
 
 function toggleDarkTheme(){
+    let ulLis = document.querySelectorAll("ul li")
     container.classList.toggle("blackBG")
     aside.classList.toggle("greyBG")
     note.classList.toggle("greyBG")
@@ -41,13 +42,29 @@ function handleNew(){
     textAreaButtons.classList.remove("hidden")
     note.classList.remove("hidden")
 }
-function alertUser(){
-    noteTitle =prompt("Please enter a title for the note.")
+function addToSideBar(newNote){
+    let isDarkMode = darkThemeButton.textContent === "Light Theme";
+    let newNoteLi = document.createElement("li")
+    console.log(newNote)
+    newNoteLi.innerText = newNote.title !== "" ? newNote.title : "Untitled"
+    document.querySelector("ul").appendChild(newNoteLi)
+    console.log(newNoteLi)
+    if (isDarkMode){
+        console.log(newNoteLi)
+        newNoteLi.classList.toggle("whiteFont")
+    }
 }
 function appendNotes(){
-    
+    let noteTitle = prompt("Please enter a title for the note.")
+    let body = note.value;
+    if (noteTitle !== "" || body !== ""){
+        let newNote = {title: noteTitle, body: body}
+        notesArray.push(newNote)
+        note.value = ""
+        addToSideBar(newNote)
+    }
+
 }
-saveButton.addEventListener("click", alertUser)
 saveButton.addEventListener("click", appendNotes)
 darkThemeButton.addEventListener("click", toggleDarkTheme)
 darkThemeButton.addEventListener("click", changeButtonText)
