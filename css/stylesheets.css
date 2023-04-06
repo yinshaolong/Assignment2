@@ -10,6 +10,7 @@ body{
 aside{
     flex-grow: 1;
     background-color: #FAF4EC;
+    
 }
 .container{
     flex-grow: 4;
@@ -144,7 +145,8 @@ li{
 @media screen and (min-width: 600px)
 {
     body{
-        flex-direction:row;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
     }
 }
 @media screen and (min-width: 280px)
